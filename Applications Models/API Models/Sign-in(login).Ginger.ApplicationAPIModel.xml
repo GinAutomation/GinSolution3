@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="fa89203d-98c8-4d4c-b897-062eb8a94caa" ItemType="ApplicationAPIModel" CreatedBy="Kashmira" Created="202007270756" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="ighal" LastUpdate="202008050804" />
+<ApplicationAPIModel APIType="REST" AuthorizationType="NoAuthentication" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="https://qa.shekelbrainweighmc.com/FlexiCore/rest/authentication/login" Guid="fa89203d-98c8-4d4c-b897-062eb8a94caa" Name="Sign-in(login)" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="{&#xD;&#xA;  &quot;mail&quot;: &quot;&lt;MAIL&gt;&quot;,&#xD;&#xA;  &quot;phoneNumber&quot;: &quot;&lt;PHONENUMBER&gt;&quot;,&#xD;&#xA;  &quot;password&quot;: &quot;&lt;PASSWORD&gt;&quot;,&#xD;&#xA;  &quot;apikey&quot;: &quot;&lt;APIKEY&gt;&quot;,&#xD;&#xA;  &quot;facebookUserId&quot;: &quot;&lt;FACEBOOKUSERID&gt;&quot;,&#xD;&#xA;  &quot;facebookToken&quot;: &quot;&lt;FACEBOOKTOKEN&gt;&quot;&#xD;&#xA;}" RequestBodyType="FreeText" RequestType="POST" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~f8e9d60b-6c45-4bb6-972f-c88f0d136e81" URLDomain="/FlexiCore">
+<AppModelParameters>
+<AppModelParameter Description="authenticationkey in headers" Guid="0f3a0dec-2427-4ef1-8e46-4143adcd24c3" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="&lt;authenticationkey&gt;" />
+<AppModelParameter Guid="89201c0c-4cf3-4439-9ee6-089c649fa8f8" ParentGuid="00000000-0000-0000-0000-000000000000" Path="mail" PlaceHolder="&lt;MAIL&gt;" TagName="mail" />
+<AppModelParameter Guid="519642cb-c436-4596-829a-607fc31450c0" ParentGuid="00000000-0000-0000-0000-000000000000" Path="phoneNumber" PlaceHolder="&lt;PHONENUMBER&gt;" TagName="phoneNumber" />
+<AppModelParameter Guid="d7a63817-b2e4-4896-bfe6-e61f07531279" ParentGuid="00000000-0000-0000-0000-000000000000" Path="password" PlaceHolder="&lt;PASSWORD&gt;" TagName="password" />
+<AppModelParameter Guid="f9a3d4ea-3134-4fab-982d-877175d5d074" ParentGuid="00000000-0000-0000-0000-000000000000" Path="apikey" PlaceHolder="&lt;APIKEY&gt;" TagName="apikey" />
+<AppModelParameter Guid="f07805e2-f094-404a-bb7d-dde2cc3fe96c" ParentGuid="00000000-0000-0000-0000-000000000000" Path="facebookUserId" PlaceHolder="&lt;FACEBOOKUSERID&gt;" TagName="facebookUserId" />
+<AppModelParameter Guid="bab32c37-c34b-4c22-8327-5f6cb233d06d" ParentGuid="00000000-0000-0000-0000-000000000000" Path="facebookToken" PlaceHolder="&lt;FACEBOOKTOKEN&gt;" TagName="facebookToken" />
+</AppModelParameters>
+
+<HttpHeaders>
+<APIModelKeyValue Guid="dae3ebec-27e2-4220-a196-1dfa653a199c" Param="authenticationkey" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;authenticationkey&gt;" />
+</HttpHeaders>
+</ApplicationAPIModel></GingerRepositoryItem>

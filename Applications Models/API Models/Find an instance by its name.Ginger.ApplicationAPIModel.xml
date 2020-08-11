@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="5718f8fc-864c-4aa3-a4ad-78b666bb5552" ItemType="ApplicationAPIModel" CreatedBy="Kashmira" Created="202007270756" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="ighal" LastUpdate="202008050804" />
+<ApplicationAPIModel APIType="REST" AuthorizationType="NoAuthentication" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="https://qa.shekelbrainweighmc.com/FlexiCore/rest/baseclass/&lt;{NAME}&gt;/&lt;{CLASSNAME}&gt;" Guid="5718f8fc-864c-4aa3-a4ad-78b666bb5552" Name="Find an instance by its name" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBodyType="FreeText" RequestType="GET" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~f8e9d60b-6c45-4bb6-972f-c88f0d136e81" URLDomain="/FlexiCore">
+<AppModelParameters>
+<AppModelParameter Description="{name}in url" Guid="473f185a-9b37-4653-ae23-295e34028d68" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="&lt;{NAME}&gt;" />
+<AppModelParameter Description="{classname}in url" Guid="25f62568-a75b-4157-940d-a875c417ff98" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="&lt;{CLASSNAME}&gt;" />
+<AppModelParameter Description="authenticationkey in headers" Guid="05151b9a-e536-4db8-88aa-3f7c3d37e0a3" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="&lt;authenticationkey&gt;" />
+</AppModelParameters>
+
+<HttpHeaders>
+<APIModelKeyValue Guid="01fdd8a6-0239-43bf-9b68-1fd12dc551eb" Param="authenticationkey" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;authenticationkey&gt;" />
+</HttpHeaders>
+</ApplicationAPIModel></GingerRepositoryItem>

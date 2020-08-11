@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="dc6bf1de-646c-4881-bba4-a289a3b07a2f" ItemType="ApplicationAPIModel" CreatedBy="Kashmira" Created="202007270756" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="ighal" LastUpdate="202008050803" />
+<ApplicationAPIModel APIType="REST" AuthorizationType="NoAuthentication" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="https://qa.shekelbrainweighmc.com/FlexiCore/rest/plugins/OrderApi/sendOrder" Guid="dc6bf1de-646c-4881-bba4-a289a3b07a2f" Name="sendOrder" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="{&#xD;&#xA;  &quot;orderId&quot;: &quot;&lt;ORDERID&gt;&quot;,&#xD;&#xA;  &quot;orderApiConfigId&quot;: &quot;&lt;ORDERAPICONFIGID&gt;&quot;&#xD;&#xA;}" RequestBodyType="FreeText" RequestType="POST" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~f8e9d60b-6c45-4bb6-972f-c88f0d136e81" URLDomain="/FlexiCore">
+<AppModelParameters>
+<AppModelParameter Description="authenticationKey in headers" Guid="5b5ac51a-f6b6-45a8-8b60-c42b660a7b6f" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="&lt;authenticationKey&gt;" />
+<AppModelParameter Guid="bf6c8cdc-44ee-4919-9955-e24111ea2255" ParentGuid="00000000-0000-0000-0000-000000000000" Path="orderId" PlaceHolder="&lt;ORDERID&gt;" TagName="orderId" />
+<AppModelParameter Guid="18d4ba8a-d60d-4276-ae3f-8faf131431ec" ParentGuid="00000000-0000-0000-0000-000000000000" Path="orderApiConfigId" PlaceHolder="&lt;ORDERAPICONFIGID&gt;" TagName="orderApiConfigId" />
+</AppModelParameters>
+
+<HttpHeaders>
+<APIModelKeyValue Guid="ad5ddf18-f282-4a67-9a27-ef6a891a69b9" Param="authenticationKey" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;authenticationKey&gt;" />
+</HttpHeaders>
+</ApplicationAPIModel></GingerRepositoryItem>

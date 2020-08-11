@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="03246926-5736-4342-9a8a-018d5ec06da3" ItemType="ApplicationAPIModel" CreatedBy="Kashmira" Created="202007270756" GingerVersion="3.6.0.0" Version="8" LastUpdateBy="ighal" LastUpdate="202008041234" />
+<ApplicationAPIModel APIType="REST" AuthorizationType="NoAuthentication" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="https://qa.shekelbrainweighmc.com/FlexiCore/rest/authenticationNew/login" Guid="03246926-5736-4342-9a8a-018d5ec06da3" Name="login" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="{&#xD;&#xA;  &quot;email&quot;: &quot;&lt;EMAIL&gt;&quot;,&#xD;&#xA;  &quot;phoneNumber&quot;: &quot;&lt;PHONENUMBER&gt;&quot;,&#xD;&#xA;  &quot;password&quot;: &quot;&lt;PASSWORD&gt;&quot;,&#xD;&#xA;  &quot;secondsValid&quot;: &lt;SECONDSVALID&gt;&#xD;&#xA;}" RequestBodyType="FreeText" RequestType="POST" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~f8e9d60b-6c45-4bb6-972f-c88f0d136e81" URLDomain="/FlexiCore">
+<AppModelParameters>
+<AppModelParameter Guid="1cf77fca-533b-48fb-b934-7e246ae8e003" ParentGuid="00000000-0000-0000-0000-000000000000" Path="email" PlaceHolder="&lt;EMAIL&gt;" TagName="email" />
+<AppModelParameter Guid="a86078d3-24cf-404e-bc86-cb2668b21a5f" ParentGuid="00000000-0000-0000-0000-000000000000" Path="phoneNumber" PlaceHolder="&lt;PHONENUMBER&gt;" RequiredAsInput="False" TagName="phoneNumber" />
+<AppModelParameter Guid="81956cdb-4735-4047-ac55-7e1ae3d070b4" ParentGuid="00000000-0000-0000-0000-000000000000" Path="password" PlaceHolder="&lt;PASSWORD&gt;" TagName="password" />
+<AppModelParameter Guid="50e1d1c0-df01-4b0f-b33f-5c0ea57d2a4d" ParentGuid="00000000-0000-0000-0000-000000000000" Path="secondsValid" PlaceHolder="&lt;SECONDSVALID&gt;" RequiredAsInput="False" TagName="secondsValid" />
+</AppModelParameters>
+</ApplicationAPIModel></GingerRepositoryItem>

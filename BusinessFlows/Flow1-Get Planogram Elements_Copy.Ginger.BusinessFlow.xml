@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="4144a28b-758d-4456-8a70-523648224a05" ItemType="BusinessFlow" CreatedBy="ighal" Created="202007221113" GingerVersion="3.6.0.0" Version="517" LastUpdateBy="ighal" LastUpdate="202008101010" />
+<BusinessFlow Elapsed="7731" Guid="4144a28b-758d-4456-8a70-523648224a05" Name="Flow1-Get Planogram Elements" ParentGuid="00000000-0000-0000-0000-000000000000" Source="Ginger" Status="Unknown">
+<Activities>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Get Planogram Elements" ActivityName="Login" AutomationStatus="Development" Description="Login and get authentication key" ErrorHandlerMappingType="AllAvailableHandlers" Guid="42022b94-7269-4f28-9e10-a8e863578540" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MyWebServicesApp">
+<Acts>
+<ActWebAPIModel Active="True" Description="Login_request- API Model Execution" Guid="c974027a-5785-4dd7-8757-ba3ba9f23c7a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="d8a47c4b-9fc6-48af-9725-993c7a922b98" Param="&lt;EMAIL&gt;" ParamGuid="f8e54df5-13e7-4838-a467-a86087603636" ParentGuid="00000000-0000-0000-0000-000000000000" Value="automation@shekel.shekel" />
+<EnhancedActInputValue Guid="97096a7d-103e-4936-80b3-37e667253d1d" Param="&lt;PASSWORD&gt;" ParamGuid="7c4f5131-2077-4ab1-bfc5-62388af5ddf9" ParentGuid="00000000-0000-0000-0000-000000000000" Value="wpDk9tkNwebgPQjn" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="cc86740a-f0dc-4fea-9edc-7fbc96314515" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="3ce91964-3878-4dbf-8091-1a1a70027113" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="d29ae049-578e-4446-9da8-ad701b35be1f" Operator="Equals" Param="authenticationKey" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="GlobalVariable" StoreToValue="115bfa65-4bb1-4e61-bf4c-e0aa9b859c55" />
+</ReturnValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Get Planogram Elements" ActivityName="Get All Planograms" AutomationStatus="Development" Description="Get list of planograms per BayID and Status" ErrorHandlerMappingType="AllAvailableHandlers" Guid="eb738135-558a-445a-b4df-127a3169c68b" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="100%" TargetApplication="MyWebServicesApp">
+<Acts>
+<ActWebAPIModel Active="True" Description="getAllPlanograms- API Model Execution" Guid="f5c70e22-454f-4a82-820a-f2a92f7d4f1d" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Description="KNYEXvWFSYCWX3C2G2hokA" Guid="90dec680-9b9b-436a-8ffe-473d0fb80fa6" Param="&lt;BAYSIDS[0]&gt;" ParamGuid="186a0154-2793-4258-b69d-73316c0fb9ca" ParentGuid="00000000-0000-0000-0000-000000000000" Value="KNYEXvWFSYCWX3C2G2hokA" />
+<EnhancedActInputValue Description="ACTIVE" Guid="eebc7d25-4b46-41cc-a626-5b1afa03b958" Param="&lt;PLANOGRAMSTATES[0]&gt;" ParamGuid="24316be8-65c2-476b-9554-9e446180ec85" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ACTIVE" />
+<EnhancedActInputValue Guid="83571a42-810a-40a7-a6fc-31c69d0d77fb" Param="&lt;AuthenticationKey&gt;" ParamGuid="cff0b859-9384-46fa-9ee6-d13cd641190b" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=AuthenticationKey}" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="77b19cf8-6ad4-439b-b8cd-745f8d6667d9" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="f50c9430-7dc2-4d32-89f3-5185927667f1" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="f6e9ba5a-d54b-4a9e-9d17-dec2fabcb966" Operator="Equals" Param="list[1].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramID_01" />
+<ActReturnValue Active="True" Guid="b99c8de7-97b5-4be7-b931-f9fbf79375c4" Operator="Equals" Param="list[2].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramID_02" />
+<ActReturnValue Active="True" Guid="dedf639f-9268-46cf-a335-7c6b6370f153" Operator="Equals" Param="list[3].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramID_03" />
+<ActReturnValue Active="True" Guid="c764c054-899b-4073-8cbb-d74af6914ab0" Operator="Equals" Param="list[4].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramID_04" />
+<ActReturnValue Active="True" Guid="fbfe7f7d-d2ed-4613-b0a9-dc12f6902e21" Operator="Equals" Param="list[5].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramID_05" />
+</ReturnValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+<Activity ActionRunOption="StopActionsRunOnFailure" Active="True" ActivitiesGroupID="Get Planogram Elements" ActivityName="Get All Planogram Elements" AutomationStatus="Development" Description="Get list of planogram elements per planogram ID" ErrorHandlerMappingType="AllAvailableHandlers" Guid="247c8f11-21e8-495f-9cac-96cc9131831f" ParentGuid="00000000-0000-0000-0000-000000000000" PercentAutomated="50%" TargetApplication="MyWebServicesApp">
+<Acts>
+<ActWebAPIRest Active="True" Description="WebAPI REST Action" Guid="ab985b52-ec72-4abf-8a7b-b12a3a7c72da" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<HttpHeaders>
+<ActInputValue Guid="deeda342-f981-469e-9cf9-f1752bf9668d" Param="AuthenticationKey" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=AuthenticationKey}" />
+</HttpHeaders>
+
+<InputValues>
+<ActInputValue Guid="da6f7b0d-dc38-4e84-ab58-7518ce96fef5" Param="EndPointURL" ParentGuid="00000000-0000-0000-0000-000000000000" Value="https://qa.shekelbrainweighmc.com/FlexiCore/rest/plugins/PlanogramElement/getAllPlanogramElements" />
+<ActInputValue Guid="8abb4830-3f60-4ff2-a662-15c2428cac7e" Param="URLUser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="fe73fc4d-6606-4114-ac2e-cab27750e2dc" Param="URLDomain" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="df67a33c-9def-4edf-a635-1cfedcedf1bf" Param="URLPass" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="9ecc9d37-a4ed-4ce5-b3a3-e1051cf2fb01" Param="NetworkCredentialsRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Default" />
+<ActInputValue Guid="841b8e94-5310-4180-9c3d-fefb46465e1d" Param="RequestBodyTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="FreeText" />
+<ActInputValue Guid="56e6656d-bd4e-4db6-8b77-b6fcd3f86f99" Param="CertificateTypeRadioButton" ParentGuid="00000000-0000-0000-0000-000000000000" Value="AllSSL" />
+<ActInputValue Guid="f24d4a07-6644-499f-bf97-f20579143eaf" Param="DoNotFailActionOnBadRespose" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<ActInputValue Guid="3fa96afb-c8b8-46d8-8d64-37ba7844e234" Param="UseLegacyJSONParsing" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<ActInputValue Guid="aa768ca8-3446-4d29-a608-291da30afdf1" Param="RequestBody" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{&#xD;&#xA;  &quot;planogramIds&quot;: [&#xD;&#xA;    &quot;Wv-Yl6GuT1yrXMbhsHg6HQ&quot;&#xD;&#xA;  ]&#xD;&#xA;}&#xD;&#xA;" />
+<ActInputValue Guid="9c17e62a-a7ab-47c5-9b64-b596b75cc59b" Param="ImportRequestFile" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<ActInputValue Guid="4efc4dc5-9143-49fa-bf17-81d3e96ae8a4" Param="CertificatePath" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ab49104c-05e8-47be-93b2-85d30830fb4d" Param="CertificatePassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="e6b3be24-296f-4faf-8014-ab0e8e6ef0e9" Param="ImportCetificateFile" ParentGuid="00000000-0000-0000-0000-000000000000" Value="False" />
+<ActInputValue Guid="085b67df-ba6b-4ce0-b5e0-17ef31d740cd" Param="SecurityType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="None" />
+<ActInputValue Guid="d99bd855-17f8-431f-9380-51d81f5d3734" Param="AuthorizationType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="NoAuthentication" />
+<ActInputValue Guid="6f577e58-760f-41d8-845f-44dbb58232c1" Param="AuthUsername" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="ad88e157-3f75-4ffa-bc8d-3807623a3086" Param="AuthPassword" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActInputValue Guid="f647e44a-36fe-4f85-ad00-1af63afd2234" Param="CookieMode" ParentGuid="00000000-0000-0000-0000-000000000000" Value="Session" />
+<ActInputValue Guid="32fe965a-87d6-4542-b083-da98e132dea1" Param="RequestType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="POST" />
+<ActInputValue Guid="190d666f-edcc-4425-9b89-57b124d54380" Param="ReqHttpVersion" ParentGuid="00000000-0000-0000-0000-000000000000" Value="HTTPV11" />
+<ActInputValue Guid="b973d8c8-d1d6-420a-8a28-b27a43203da4" Param="ContentType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="JSon" />
+<ActInputValue Guid="efedc674-4968-4402-b2b2-234c8ae0e483" Param="ResponseContentType" ParentGuid="00000000-0000-0000-0000-000000000000" Value="JSon" />
+<ActInputValue Guid="3b9f5e80-9658-44a2-8534-80b0ca822213" Param="TemplateFileNameFileBrowser" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="2d907e76-5e46-40bc-b2fc-d70a944b8de9" Operator="Equals" Param="list[1].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementID_01" />
+<ActReturnValue Active="True" Guid="1c729d1e-59a7-4e96-a31d-f3ba63063216" Operator="Equals" Param="list[1].name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementName_01" />
+<ActReturnValue Active="True" Guid="4663508a-99eb-4f98-9de3-58f8188d7ae6" Operator="Equals" Param="list[2].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementID_02" />
+<ActReturnValue Active="True" Guid="f28dc4f3-eec6-43be-97bf-063388a5487f" Operator="Equals" Param="list[2].name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementName_02" />
+<ActReturnValue Active="True" Guid="e7a05893-8d86-4002-a48d-4b47b2466774" Operator="Equals" Param="list[3].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementID_03" />
+<ActReturnValue Active="True" Guid="0ec97301-fcf2-4ce0-9eb7-21a6f37871af" Operator="Equals" Param="list[3].name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementName_03" />
+</ReturnValues>
+</ActWebAPIRest>
+<ActWebAPIModel Description="getAllPlanogramElements- API Model Execution" Guid="227d6076-843a-4a04-a12e-585a26f656d5" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Description="authenticationKey in headers" Guid="3ac390cc-d470-4b67-a136-207e3f4cd707" Param="&lt;authenticationKey&gt;" ParamGuid="bc60a8b0-8843-494b-a7a7-3b6f0db6bbc5" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=AuthenticationKey}" />
+<EnhancedActInputValue Guid="2bb2ab8a-249a-41f0-b706-e60a95ef89f8" Param="&lt;PLANOGRAMIDS&gt;" ParamGuid="3e526130-f597-4585-af64-2a6ed3884e61" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=PlanogramID_01}" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="cc005226-6fc1-43a5-ba88-62108d754fdb" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ed01b5bc-c22d-4898-8707-bf547f66ffb8" />
+</InputValues>
+
+<ReturnValues>
+</ReturnValues>
+</ActWebAPIModel>
+</Acts>
+</Activity>
+</Activities>
+
+<ActivitiesGroups>
+<ActivitiesGroup Guid="a268bd74-18cd-43b5-b5cb-3d12e3017cf6" Name="Get Planogram Elements" ParentGuid="00000000-0000-0000-0000-000000000000">
+<ActivitiesIdentifiers>
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="Login and get authentication key" ActivityGuid="42022b94-7269-4f28-9e10-a8e863578540" ActivityName="Login" Guid="b6f9b0ad-5cc4-4a3d-81aa-24c7ede91d76" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="Get list of planograms per BayID and Status" ActivityGuid="eb738135-558a-445a-b4df-127a3169c68b" ActivityName="Get All Planograms" Guid="5f6ab2c9-44e0-495c-a226-c8a838ad9275" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<ActivityIdentifiers ActivityAutomationStatus="Development" ActivityDescription="Get list of planogram elements per planogram ID" ActivityGuid="247c8f11-21e8-495f-9cac-96cc9131831f" ActivityName="Get All Planogram Elements" Guid="7c55a162-fb7a-4de7-9bb9-5f5a0ffb5f15" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</ActivitiesIdentifiers>
+</ActivitiesGroup>
+</ActivitiesGroups>
+
+<TargetApplications>
+<TargetApplication AppName="MyWebServicesApp" Guid="217e511c-3036-4b56-b766-4714a74ab635" LastExecutingAgentName="MyWebServicesApp - Agent 1" ParentGuid="00000000-0000-0000-0000-000000000000" />
+</TargetApplications>
+
+<Variables>
+<VariableString Guid="ded506c8-a2f8-4407-b5ba-199e6c9a607d" InitialStringValue="Wv-Yl6GuT1yrXMbhsHg6HQ" MappedOutputType="None" Name="PlanogramID_01" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="0eab73c4-4c16-40db-9c45-34fe701c881a" InitialStringValue="Wv-Yl6GuT1yrXMbhsHg6HQ" MappedOutputType="None" Name="PlanogramID_02" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="17ef4328-ce35-4825-a2ec-adf1033d74ac" InitialStringValue="mtPVXnSjRwmZGnpsALjZuQ" MappedOutputType="None" Name="PlanogramID_03" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="0b7f649e-7787-4182-a3d6-31e1550489b6" InitialStringValue="wJOcJWYoTje42UmlWoBiQg" MappedOutputType="None" Name="PlanogramID_04" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="d51012b3-c5d8-48a8-a6e1-bde8ae4d29f3" InitialStringValue="SDHuzqj4SoKF3sL1elFryw" MappedOutputType="None" Name="PlanogramID_05" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="1752aa3c-ab3f-401c-86e4-fec392503c85" MappedOutputType="None" Name="PlanogramID_06" ParentGuid="00000000-0000-0000-0000-000000000000" />
+<VariableString Guid="661fd2f9-1c1c-48a4-9de8-7f4e27ad0251" InitialStringValue="khIOENGbQQyugKriib8+bQ" MappedOutputType="None" Name="PlanogramElementID_01" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="bc9c53f6-3690-4675-91f8-213a9621e5eb" InitialStringValue="Generated Planogram" MappedOutputType="None" Name="PlanogramElementID_02" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="cb6036da-9199-4a23-b308-cadfa95ee2d1" InitialStringValue="sBSuUdE8R0qSwAunKmxjQA" MappedOutputType="None" Name="PlanogramElementID_03" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Description="Element ID product description" Guid="e1041c4b-b48a-4e5e-a021-90a80403325e" InitialStringValue="Generated Planogram" MappedOutputType="None" Name="PlanogramElementName_01" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="82cabde3-badd-4892-b2f2-4a0c45f5ea58" InitialStringValue="Mentos" MappedOutputType="None" Name="PlanogramElementName_02" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+<VariableString Guid="2ce24ac0-4b4a-4864-ab9e-2d474ff83059" InitialStringValue="קינדר בואנו" MappedOutputType="None" Name="PlanogramElementName_03" ParentGuid="4144a28b-758d-4456-8a70-523648224a05" ParentName="Flow1-Get Planogram Elements" ParentType="Business Flow" />
+</Variables>
+</BusinessFlow></GingerRepositoryItem>

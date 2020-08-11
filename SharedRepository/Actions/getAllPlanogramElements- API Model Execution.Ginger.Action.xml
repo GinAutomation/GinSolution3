@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="635aa689-9a87-4877-973b-caede96902b8" ItemType="ActWebAPIModel" CreatedBy="ighal" Created="202008041329" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="ighal" LastUpdate="202008041329" />
+<ActWebAPIModel Active="True" Description="getAllPlanogramElements- API Model Execution" Guid="635aa689-9a87-4877-973b-caede96902b8" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Description="authenticationKey in headers" Guid="06811f15-4377-4efc-863e-54a539172553" Param="&lt;authenticationKey&gt;" ParamGuid="bc60a8b0-8843-494b-a7a7-3b6f0db6bbc5" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=AuthenticationKey}" />
+<EnhancedActInputValue Guid="0f3fe9f9-b949-4677-8514-4047afe8467d" Param="&lt;PLANOGRAMIDS&gt;" ParamGuid="3e526130-f597-4585-af64-2a6ed3884e61" ParentGuid="00000000-0000-0000-0000-000000000000" Value="{Var Name=PlanogramID_01}" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="f8f79d0a-7ab6-4477-9279-77f7a4e91f88" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="ed01b5bc-c22d-4898-8707-bf547f66ffb8" />
+</InputValues>
+
+<ReturnValues>
+<ActReturnValue Active="True" Guid="65695a5d-6ecf-4283-8091-fd2dde2e9434" Operator="Equals" Param="list[1].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementID_01" />
+<ActReturnValue Active="True" Guid="f211defe-ecda-43da-a42a-38fc5854fa3c" Operator="Equals" Param="list[1].name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementName_01" />
+<ActReturnValue Active="True" Guid="f827e2f5-82d0-4162-bc41-53f928469bd7" Operator="Equals" Param="list[2].id" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="PlanogramElementID_02" />
+<ActReturnValue Active="True" Guid="5f5357b2-7c0d-4074-98d1-b12fbac19104" Operator="Equals" Param="list[2].name" ParentGuid="00000000-0000-0000-0000-000000000000" StoreTo="Variable" StoreToValue="PlanogramElementName_02" />
+<ActReturnValue Active="True" Guid="f165ab79-a7da-405e-adff-d4d084b0cbde" Operator="Equals" Param="list[3].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementID_02" />
+<ActReturnValue Active="True" Guid="e1000161-cc4b-4738-bcac-b871d7de4d38" mExpected="Generated Planogram" Operator="Equals" Param="list[3].name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementName_02" />
+<ActReturnValue Active="True" Guid="f59aa53e-8c9b-47b0-b904-b1d6b2dbd99b" Operator="Equals" Param="list[4].id" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementID_04" />
+<ActReturnValue Active="True" Guid="35064864-b3a6-4948-86e6-38823b89bae6" Operator="Equals" Param="list[4].name" ParentGuid="00000000-0000-0000-0000-000000000000" Path="1" StoreTo="Variable" StoreToValue="PlanogramElementName_04" />
+</ReturnValues>
+</ActWebAPIModel></GingerRepositoryItem>

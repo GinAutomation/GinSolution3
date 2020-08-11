@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="3ce91964-3878-4dbf-8091-1a1a70027113" ItemType="ApplicationAPIModel" CreatedBy="ighal" Created="202007221129" GingerVersion="3.6.0.0" Version="9" LastUpdateBy="ighal" LastUpdate="202007230815" />
+<ApplicationAPIModel APIType="REST" AuthorizationType="NoAuthentication" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="https://qa.shekelbrainweighmc.com/FlexiCore/rest/authenticationNew/login" Guid="3ce91964-3878-4dbf-8091-1a1a70027113" Name="Login_request" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="{&#xD;&#xA;  &quot;email&quot;: &quot;&lt;EMAIL&gt;&quot;,&#xD;&#xA;  &quot;password&quot;: &quot;&lt;PASSWORD&gt;&quot;&#xD;&#xA;}" RequestBodyType="FreeText" RequestType="POST" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~f8e9d60b-6c45-4bb6-972f-c88f0d136e81">
+<AppModelParameters>
+<AppModelParameter Guid="f8e54df5-13e7-4838-a467-a86087603636" ParentGuid="00000000-0000-0000-0000-000000000000" Path="email" PlaceHolder="&lt;EMAIL&gt;" TagName="email" />
+<AppModelParameter Guid="7c4f5131-2077-4ab1-bfc5-62388af5ddf9" ParentGuid="00000000-0000-0000-0000-000000000000" Path="password" PlaceHolder="&lt;PASSWORD&gt;" TagName="password" />
+</AppModelParameters>
+
+<ReturnValues>
+<ActReturnValue Active="True" DoNotConsiderAsTemp="True" Guid="f97e7451-b626-4fa0-a0a6-42dc8b2d5511" Operator="Legacy" Param="authenticationKey" ParentGuid="00000000-0000-0000-0000-000000000000" Path="authenticationKey" StoreTo="None" />
+<ActReturnValue Active="True" DoNotConsiderAsTemp="True" Guid="f11cea34-0330-45a5-aff6-e707e59ecfff" Operator="Legacy" Param="tokenExpirationDate" ParentGuid="00000000-0000-0000-0000-000000000000" Path="tokenExpirationDate" StoreTo="None" />
+<ActReturnValue Active="True" DoNotConsiderAsTemp="True" Guid="3d362d72-815b-45ad-838e-fff444e0f4b1" Operator="Legacy" Param="userId" ParentGuid="00000000-0000-0000-0000-000000000000" Path="userId" StoreTo="None" />
+</ReturnValues>
+</ApplicationAPIModel></GingerRepositoryItem>

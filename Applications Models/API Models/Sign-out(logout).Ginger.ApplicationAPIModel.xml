@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="8162351a-79fe-4702-be04-6fbad5c7140d" ItemType="ApplicationAPIModel" CreatedBy="Kashmira" Created="202007270756" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="ighal" LastUpdate="202008050804" />
+<ApplicationAPIModel APIType="REST" AuthorizationType="NoAuthentication" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="https://qa.shekelbrainweighmc.com/FlexiCore/rest/authentication/logout" Guid="8162351a-79fe-4702-be04-6fbad5c7140d" Name="Sign-out(logout)" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBodyType="FreeText" RequestType="POST" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~f8e9d60b-6c45-4bb6-972f-c88f0d136e81" URLDomain="/FlexiCore">
+<AppModelParameters>
+<AppModelParameter Description="authenticationkey in headers" Guid="c089ab54-f77e-4750-8b65-fb5de7cca57b" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="&lt;authenticationkey&gt;" />
+</AppModelParameters>
+
+<HttpHeaders>
+<APIModelKeyValue Guid="547cf51f-b1f0-49a7-9d9b-d765208f80e7" Param="authenticationkey" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;authenticationkey&gt;" />
+</HttpHeaders>
+</ApplicationAPIModel></GingerRepositoryItem>

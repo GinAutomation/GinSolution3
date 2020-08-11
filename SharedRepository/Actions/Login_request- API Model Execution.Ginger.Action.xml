@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="c974027a-5785-4dd7-8757-ba3ba9f23c7a" ItemType="ActWebAPIModel" CreatedBy="ighal" Created="202007230828" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="ighal" LastUpdate="202007230828" />
+<ActWebAPIModel Active="True" Description="Login_request- API Model Execution" Guid="c974027a-5785-4dd7-8757-ba3ba9f23c7a" MaxNumberOfRetries="2" ParentGuid="00000000-0000-0000-0000-000000000000" Platform="NA" RetryMechanismInterval="5" StatusConverter="None" WaitVE="0" WindowsToCapture="OnlyActiveWindow">
+<APIModelParamsValue>
+<EnhancedActInputValue Guid="c3ad3384-19be-48ef-b39a-7ced5e1197c9" Param="&lt;EMAIL&gt;" ParamGuid="f8e54df5-13e7-4838-a467-a86087603636" ParentGuid="00000000-0000-0000-0000-000000000000" Value="automation@shekel.shekel" />
+<EnhancedActInputValue Guid="3a410368-3d21-4c88-a108-02a898c41f04" Param="&lt;PASSWORD&gt;" ParamGuid="7c4f5131-2077-4ab1-bfc5-62388af5ddf9" ParentGuid="00000000-0000-0000-0000-000000000000" Value="wpDk9tkNwebgPQjn" />
+</APIModelParamsValue>
+
+<InputValues>
+<ActInputValue Guid="cc86740a-f0dc-4fea-9edc-7fbc96314515" Param="APImodelGUID" ParentGuid="00000000-0000-0000-0000-000000000000" Value="3ce91964-3878-4dbf-8091-1a1a70027113" />
+</InputValues>
+</ActWebAPIModel></GingerRepositoryItem>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GingerRepositoryItem><Header ItemGuid="04bd4185-a4da-422d-8bfb-ac2cbc1e4966" ItemType="ApplicationAPIModel" CreatedBy="Kashmira" Created="202007270756" GingerVersion="3.6.0.0" Version="2" LastUpdateBy="ighal" LastUpdate="202008050804" />
+<ApplicationAPIModel APIType="REST" AuthorizationType="NoAuthentication" CertificateType="AllSSL" ContentType="JSon" CookieMode="Session" EndpointURL="https://qa.shekelbrainweighmc.com/FlexiCore/rest/audit/getAllAuditingEvents" Guid="04bd4185-a4da-422d-8bfb-ac2cbc1e4966" Name="getAllAuditingEvents" NetworkCredentials="Default" ParentGuid="00000000-0000-0000-0000-000000000000" ReqHttpVersion="HTTPV10" RequestBody="{&#xD;&#xA;  &quot;typeLike&quot;: &quot;&lt;TYPELIKE&gt;&quot;,&#xD;&#xA;  &quot;operationIds&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;filterId&quot;: &quot;&lt;FILTERID&gt;&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;&lt;ID&gt;&quot;&#xD;&#xA;    }&#xD;&#xA;  ],&#xD;&#xA;  &quot;userIds&quot;: [&#xD;&#xA;    {&#xD;&#xA;      &quot;filterId&quot;: &quot;&lt;FILTERID1&gt;&quot;,&#xD;&#xA;      &quot;id&quot;: &quot;&lt;ID1&gt;&quot;&#xD;&#xA;    }&#xD;&#xA;  ]&#xD;&#xA;}" RequestBodyType="FreeText" RequestType="POST" ResponseContentType="JSon" SecurityType="None" TargetApplicationKey="MyWebServicesApp~f8e9d60b-6c45-4bb6-972f-c88f0d136e81" URLDomain="/FlexiCore">
+<AppModelParameters>
+<AppModelParameter Description="authenticationKey in headers" Guid="a40613fe-541e-4616-8a6a-020795dea883" ParentGuid="00000000-0000-0000-0000-000000000000" PlaceHolder="&lt;authenticationKey&gt;" />
+<AppModelParameter Guid="a5ca4b42-fc8f-4c5b-b9b2-121b99635298" ParentGuid="00000000-0000-0000-0000-000000000000" Path="typeLike" PlaceHolder="&lt;TYPELIKE&gt;" TagName="typeLike" />
+<AppModelParameter Guid="e44c8165-7827-4328-904e-e922989b1e25" ParentGuid="00000000-0000-0000-0000-000000000000" Path="operationIds[0].filterId" PlaceHolder="&lt;FILTERID&gt;" TagName="filterId" />
+<AppModelParameter Guid="7c904863-097c-41d5-a889-91499a0d0875" ParentGuid="00000000-0000-0000-0000-000000000000" Path="operationIds[0].id" PlaceHolder="&lt;ID&gt;" TagName="id" />
+<AppModelParameter Guid="9cc230e2-c4cb-401d-8fee-d24621a61092" ParentGuid="00000000-0000-0000-0000-000000000000" Path="userIds[0].filterId" PlaceHolder="&lt;FILTERID1&gt;" TagName="filterId" />
+<AppModelParameter Guid="736400c7-d35e-4373-a6a5-4ae1e1345192" ParentGuid="00000000-0000-0000-0000-000000000000" Path="userIds[0].id" PlaceHolder="&lt;ID1&gt;" TagName="id" />
+</AppModelParameters>
+
+<HttpHeaders>
+<APIModelKeyValue Guid="dcef9061-dd41-4bf4-9e71-5e206a03ddd1" Param="authenticationKey" ParentGuid="00000000-0000-0000-0000-000000000000" Value="&lt;authenticationKey&gt;" />
+</HttpHeaders>
+</ApplicationAPIModel></GingerRepositoryItem>
